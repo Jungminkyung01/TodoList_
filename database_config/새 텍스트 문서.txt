@@ -1,0 +1,26 @@
+show tables;
+create table member(
+ id varchar(8) primary key,
+ name varchar(15) not null, 
+ password varchar(12) not null,
+ email varchar(50) not null,
+ mbti varchar(10) not null,
+ join_date datetime default current_timestamp);
+ 
+ 
+
+update member set name = '김으니' where id = 'sku1';
+update member set email = 'jungeun9019@naver.com' where id = 'sku1';
+
+insert into member values('sku', '서경이', 'skupw', 'sku@sku.ac.kr', default);
+insert into member values('sku1', '김으니', 'skupw1', 'jungeun9019@naver.com', default);
+
+select * from member;
+
+desc member;
+desc todo; 
+select * from todo;
+
+drop table todo cascade;
+
+drop table member cascade;
